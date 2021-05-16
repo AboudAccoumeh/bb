@@ -94,6 +94,7 @@ function Player(x,y){
 	this.update = function(){
 		var prx = c.width/100;
 		var pry = c.height/100;
+		ctx.fillStyle = "blue";
 		ctx.fillText(tilt.x,0,0);
 		if(tilt.x){
 			this.x += tilt.x/3.2;
