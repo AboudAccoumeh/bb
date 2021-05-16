@@ -94,7 +94,12 @@ function Player(x,y){
 	this.update = function(){
 		var prx = c.width/100;
 		var pry = c.height/100;
-		this.x += tilt.x || this.vx;
+		if(tilt.x){
+			this.x += tilt.x/2.2;
+		}
+		else{
+			this.x += this.vx;
+		}
 		this.y += this.vy;
 		this.vx += this.ax;
 		this.vy += this.ay;
