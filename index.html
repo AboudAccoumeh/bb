@@ -22,7 +22,7 @@ var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
 var obstacles = [];
 var player = new Player(50,50);
-var tilt = {x:0};
+var tilt = {x:undefined};
 
 obstacles[0] = new Obstacle(0,96,100,4);
 for(var y=-5000;y<80;y+=10){
@@ -94,7 +94,7 @@ function Player(x,y){
 	this.update = function(){
 		var prx = c.width/100;
 		var pry = c.height/100;
-		this.x += tilt.x;
+		this.x += tilt.x || this.vx;
 		this.y += this.vy;
 		this.vx += this.ax;
 		this.vy += this.ay;
