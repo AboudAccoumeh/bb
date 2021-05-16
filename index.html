@@ -94,10 +94,10 @@ function Player(x,y){
 	this.update = function(){
 		var prx = c.width/100;
 		var pry = c.height/100;
-		ctx.font = "46px sans-serif bold";
+		ctx.font = "100px";
 		ctx.fillStyle = "blue";
-		ctx.fillText(tilt.x,100,100);
-		ctx.strokeText(tilt.x,100,100);
+		ctx.fillText(tilt.x,0.1*c.width,0.1*c.height);
+		ctx.strokeText(tilt.x,0.1*c.width,0.1*c.height);
 		if(tilt.x){
 			this.x += tilt.x/3.2;
 		}
