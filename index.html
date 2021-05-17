@@ -98,8 +98,9 @@ function Player(x,y){
 		ctx.fillStyle = "blue";
 		ctx.fillText(Math.pow(tilt.x/3.2,1.5),0.1*c.width,0.1*c.height);
 		ctx.strokeText(Math.pow(tilt.x/3.2,1.5),0.1*c.width,0.1*c.height);
+		var sign = Math.abs(tilt.x)/tilt.x;
 		if(tilt.x){
-			this.x += Math.pow(tilt.x/3.2,1.5);
+			this.x += sign * Math.pow(Math.abs(tilt.x/3.2),1.5);
 		}
 		else{
 			this.x += this.vx;
