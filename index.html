@@ -96,10 +96,10 @@ function Player(x,y){
 		var pry = c.height/100;
 		ctx.font = "100px";
 		ctx.fillStyle = "blue";
-		ctx.fillText(tilt.x,0.1*c.width,0.1*c.height);
-		ctx.strokeText(tilt.x,0.1*c.width,0.1*c.height);
+		ctx.fillText(Math.pow(tilt.x/3.2,1.5),0.1*c.width,0.1*c.height);
+		ctx.strokeText(Math.pow(tilt.x/3.2,1.5),0.1*c.width,0.1*c.height);
 		if(tilt.x){
-			this.x += tilt.x/3.2;
+			this.x += Math.pow(tilt.x/3.2,1.5);
 		}
 		else{
 			this.x += this.vx;
