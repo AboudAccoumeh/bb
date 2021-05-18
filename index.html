@@ -116,7 +116,7 @@ function Player(x,y){
 		for(var i=0;i<obstacles.length;i++){
 			if(rectsColliding([this.x*prx-this.radius*(prx+pry)/2,this.y*pry-this.radius*(prx+pry)/2,2*this.radius*(prx+pry)/2,2*this.radius*(prx+pry)/2],[obstacles[i].x*prx,obstacles[i].y*pry,obstacles[i].width*prx,obstacles[i].height*pry]) && this.vy > 0){
 				this.ay = -0.05;
-				this.vy = -1.2;
+				this.vy = -0.8;
 				this.y = obstacles[i].y - (this.radius*(prx+pry)/2)/pry;
 			}
 		}
