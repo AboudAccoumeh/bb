@@ -98,8 +98,8 @@ function Player(x,y){
 		/*ctx.font = "100px";
 		ctx.fillStyle = "blue";
 		ctx.fillText(Math.abs(tilt.x)/tilt.x * Math.pow(Math.abs(tilt.x)/3.2,1.5),0.1*c.width,0.1*c.height);
-		ctx.strokeText( Math.abs(tilt.x)/tilt.x * Math.pow(Math.abs(tilt.x)/3.2,1.5),0.1*c.width,0.1*c.height);*/
-		if(oldTilt.x && oldTilt.x-tilt.x > 0.1){
+		ctx.strokeText(Math.abs(tilt.x)/tilt.x * Math.pow(Math.abs(tilt.x)/3.2,1.5),0.1*c.width,0.1*c.height);*/
+		if(oldTilt.x && oldTilt.x-tilt.x > 0.5){
 			tilt.x *= -1;
 		}
 		var sign = Math.abs(tilt.x)/tilt.x;
