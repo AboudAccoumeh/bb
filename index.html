@@ -73,6 +73,7 @@ window.addEventListener("touchend",function(){
 window.addEventListener("keyup",function(){
 	player.vx = 0;
 });
+
 function Player(x,y){
 	this.x = x;
 	this.y = y;
@@ -86,7 +87,7 @@ function Player(x,y){
 	this.draw = function(){
 		var prx = c.width/100;
 		var pry = c.height/100;
-		ctx.fillStyle = "hsl("+this.hue+",80%,50%)";
+		ctx.fillStyle = "hsl("+this.hue+",100%,40%)";
 		ctx.beginPath();
 		ctx.arc(this.x*prx,this.y*pry,this.radius*(prx+pry)/2,0,2*Math.PI);
 		ctx.closePath();
@@ -100,7 +101,6 @@ function Player(x,y){
 		ctx.fillText(Math.abs(tilt.x)/tilt.x * Math.pow(Math.abs(tilt.x)/3.2,1.5),0.1*c.width,0.1*c.height);
 		ctx.strokeText(Math.abs(tilt.x)/tilt.x * Math.pow(Math.abs(tilt.x)/3.2,1.5),0.1*c.width,0.1*c.height);*/
 		var sign = Math.abs(tilt.x)/tilt.x;
-		if(dir){sign *= dir;}
 		if(tilt.x){
 			this.x += sign * Math.pow(Math.abs(tilt.x/3.2),1.5);
 		}
@@ -112,7 +112,7 @@ function Player(x,y){
 		this.vx += this.ax;
 		this.vy += this.ay;
 		this.ay += this.gravity;
-		this.hue+=2;
+		this.hue+=3;
 		if(this.x<0){this.x=100}
 		else if(this.x>100){this.x=0}
 		
